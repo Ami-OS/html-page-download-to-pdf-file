@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <noscript>
+    </noscript>
+    <title>通識答題基本框架</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="libs/bootstrap-v5/css/bootstrap.min.css" />
+    <!-- main -->
+    <link rel="stylesheet" href="css.css" />
+</head>
+<body class="load-shell">
+    <!-- page 1 -->
+    <main class="my-4 page" id="page-1">
+        <div class="row prefix">
+            <div class="col">
+                <div class="input-group content-stu-name">
+                    <span class="input-group-text rounded-0 bg-transparent border-0">姓名：</span>
+                    <textarea class="form-control rounded-0 border-top-0 border-left-0 border-right-0 border-2" aria-label="Name"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group content-stu-class">
+                    <span class="input-group-text rounded-0 bg-transparent border-0">班別：</span>
+                    <textarea class="form-control rounded-0 border-top-0 border-left-0 border-right-0 border-2" aria-label="Class"></textarea>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="content">
+            <div class="input-group my-4 content-introduction">
+                <span class="input-group-text rounded-0">引言</span>
+                <textarea class="form-control rounded-0" aria-label="Introduction"></textarea>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item text-center rounded-0">論點一</li>
+            </ul>
+
+            <div class="input-group content-topic-sentence">
+                <span class="input-group-text rounded-0"><b>主題句</b></span>
+                <textarea class="form-control rounded-0" aria-label="Topic Sentence"></textarea>
+            </div>
+            <div class="input-group content-information-cited">
+                <span class="input-group-text rounded-0">資料引用</span>
+                <textarea class="form-control rounded-0" aria-label="Information cited">根據資料</textarea>
+            </div>
+            <div class="input-group content-explanation">
+                <span class="input-group-text rounded-0">解釋</span>
+                <textarea class="form-control rounded-0" aria-label="Explanation"></textarea>
+            </div>
+            <div class="input-group content-summary">
+                <span class="input-group-text rounded-0">小結</span>
+                <textarea class="form-control rounded-0" aria-label="Summary">可見，</textarea>
+            </div>
+        </div>
+    </main>
+
+    <!-- page 2 -->
+    <main class="my-4 page" id="page-2">
+        <div class="content">
+            <ul class="list-group">
+                <li class="list-group-item text-center rounded-0">論點二</li>
+            </ul>
+            <div class="input-group content-topic-sentence">
+                <span class="input-group-text rounded-0"><b>主題句</b></span>
+                <textarea class="form-control rounded-0" aria-label="Topic Sentence"></textarea>
+            </div>
+            <div class="input-group content-information-cited">
+                <span class="input-group-text rounded-0">資料引用</span>
+                <textarea class="form-control rounded-0" aria-label="Information cited">根據資料</textarea>
+            </div>
+            <div class="input-group content-explanation">
+                <span class="input-group-text rounded-0">解釋</span>
+                <textarea class="form-control rounded-0" aria-label="Explanation"></textarea>
+            </div>
+            <div class="input-group content-summary">
+                <span class="input-group-text rounded-0">小結</span>
+                <textarea class="form-control rounded-0" aria-label="Summary">可見，</textarea>
+            </div>
+
+            <div class="input-group mt-4 content-in-conclusion">
+                <span class="input-group-text rounded-0">結論</span>
+                <textarea class="form-control rounded-0" aria-label="In conclusion">總結而言，</textarea>
+            </div>
+        </div>
+    </main>
+
+    <!-- download btu -->
+    <div class="my-4 button-box">
+        <button type="button" class="btn btn-primary" id="download">Download with PDF</button>
+        <!-- <div class="alert alert-info" role="alert" id="genmsg" style="display:none;">Generating PDF ...</div> -->
+    </div>
+    
+    <!-- bootstrap -->
+    <script type="text/javascript" charset="UTF-8" src="libs/bootstrap-v5/js/bootstrap.bundle.min.js"></script>
+    <!-- autosize -->
+    <script type="text/javascript" charset="UTF-8" src="libs/autosize-v4/autosize.min.js"></script>
+    <!-- jquery -->
+    <script type="text/javascript" charset="UTF-8" src="libs/jquery-v3/jquery-3.6.0.min.js"></script>
+    <!-- jspdf-->
+    <script type="text/javascript" charset="UTF-8" src="libs/jspdf-v2/jspdf.umd.min.js"></script>
+    <!-- html2canvas -->
+    <script type="text/javascript" charset="UTF-8" src="libs/html2canvas-v1/html2canvas.min.js"></script>
+    <!-- main -->
+    <script type="text/javascript" charset="UTF-8" src="js.js"></script>
+</body>
+</html>

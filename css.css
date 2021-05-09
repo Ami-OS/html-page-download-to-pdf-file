@@ -1,0 +1,102 @@
+/* Overwrite orig style */
+body {
+    margin: 0;
+}
+
+/* Define */
+:root {
+    --general-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Helvetica,Arial,/* English */"PingFang TC","Hiragino Sans TC","Microsoft JhengHei","Microsoft JhengHei UI","Source Han Sans TW",/* Traditional Chinese */"PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei","Source Han Sans CN",/* Simplified Chinese */sans-serif,/* Safe */"Apple Color Emoji","Segoe UI Emoji"/* Emoji */;
+
+}
+
+/* Style */
+body {
+    background-color: #e8eaed;
+    font-family: var(--general-font-family);
+}
+
+/* load shell */
+.load-shell {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+main {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    margin: 0 auto;
+    padding: 60px;
+    width: 936px;
+    max-width: 936px;
+    min-width: 936px;
+    min-height: 1324px;
+    display: block;
+    position: relative;
+}
+
+@media print { main {
+    box-shadow: none;
+} }
+
+@media (max-width: 936px) { main.page {
+    margin: 0 !important;
+} }
+
+.content .input-group-text {
+    width: auto;
+    white-space: initial;
+}
+
+.content .input-group {
+    margin-top: -1px;
+}
+
+/* Textarea */
+textarea.form-control {
+    height: calc(1.5em + .75rem + 2px);
+}
+
+/* Border */
+.border-top-0 {
+    border-top: 0 !important;
+}
+
+.border-bottom-0 {
+    border-bottom: 0 !important;
+}
+
+.border-left-0 {
+    border-left: 0 !important;
+}
+
+.border-right-0 {
+    border-right: 0 !important;
+}
+
+/* Content */
+.content textarea.form-control {
+    height: calc((1.5em * var(--min-line, 2)) + .75rem + 2px);
+}
+
+.content-information-cited textarea.form-control,
+.content-explanation textarea.form-control {
+    --min-line: 4;
+}
+
+/* Download button */
+.button-box {
+    width: 936px;
+    max-width: 936px;
+    min-width: 936px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Debug */
+canvas {
+    display: block;
+    margin: 1.5rem auto;
+}
