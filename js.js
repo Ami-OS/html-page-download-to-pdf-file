@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
             html2canvas(document.querySelector("#page-1")).then(canvas => {
                 document.body.appendChild(canvas);
             });
+            
+            $(document).scrollTop($('#download').offset().top);
         };
 
         // Start generator
