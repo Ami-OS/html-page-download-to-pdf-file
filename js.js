@@ -106,15 +106,24 @@ document.addEventListener('DOMContentLoaded', () => {
     /*
      * parsing URL
      */
-    var local_url = new URL(location.href);
+    var local_url = new URL(window.location.href);
 
-    var load_script = document.createElement("script");
-    load_script.type = "text/javascript";
+    var load_script = document.createElement('script');
+    load_script.type = 'text/javascript';
+    load_script.charset = 'UTF-8';
 
     if (local_url.searchParams.has('rc')) {
         var local_url_sp_rc = local_url.searchParams.get('rc');
+
+        // rc toggle button
+        if (local_url_sp_rc == 7) {
+            $('#rc-toggle').text('Switch to rc.1').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=1'); });
+        } else {
+            $('#rc-toggle').text('Switch to rc.7').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=7'); });
+        }
     } else {
         var local_url_sp_rc = 7;
+        $('#rc-toggle').text('Switch to rc.1');
     }
 
     load_script.src = 'libs/html2canvas-v1/rc.' + local_url_sp_rc + '/html2canvas.min.js';
