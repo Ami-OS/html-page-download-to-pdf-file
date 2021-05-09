@@ -117,13 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // rc toggle button
         if (local_url_sp_rc == 7) {
-            $('#rc-toggle').text('Switch to rc.1').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=1'); });
+            $('#rc-toggle').text('Switch to rc.1').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=1'); }).prop('disabled', false);
         } else {
-            $('#rc-toggle').text('Switch to rc.7').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=7'); });
+            $('#rc-toggle').text('Switch to rc.7').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=7'); }).prop('disabled', false);
         }
     } else {
         var local_url_sp_rc = 7;
-        $('#rc-toggle').text('Switch to rc.1');
+        $('#rc-toggle').text('Switch to rc.1').on('click', function() { window.location.replace(local_url.origin + local_url.pathname + '?rc=1'); }).prop('disabled', false);
     }
 
     load_script.src = 'libs/html2canvas-v1/rc.' + local_url_sp_rc + '/html2canvas.min.js';
