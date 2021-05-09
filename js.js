@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //     }, 0);
             // });
 
+            // Debug
             html2canvas(document.querySelector("#page-1")).then(canvas => {
                 document.body.appendChild(canvas);
             });
