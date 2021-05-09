@@ -104,6 +104,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /*
+     * parsing URL
+     */
+    var local_url = new URL(location.href);
+
+    var load_script = document.createElement("script");
+    load_script.type = "text/javascript";
+
+    if (local_url.searchParams.has('rc')) {
+        var local_url_sp_rc = local_url.searchParams.get('rc');
+    } else {
+        var local_url_sp_rc = 7;
+    }
+
+    load_script.src = 'libs/html2canvas-v1/rc.' + local_url_sp_rc + '/html2canvas.min.js';
+    $('body').append(load_script);
+
+    /*
      * loaded
      */
     document.querySelectorAll('.load-shell').forEach(e => e.classList.remove('load-shell'));
